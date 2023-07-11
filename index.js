@@ -38,7 +38,7 @@ function distanceTravelledInFeet(start, destination){
 
 function calculatesFarePrice(start, destination){
     // subtract start from destination and multiply by 264 to get feet
-    let fare = (destination - start) * 264
+    const fare = Math.abs(destination - start) * 264
 
     // return 0 since there is no charge for first 400
     if (fare <= 400) {
@@ -49,8 +49,8 @@ function calculatesFarePrice(start, destination){
         return faredd
     } else if (fare <= 2500) {
         return 25
-    } else if (fare > 2500) {
-        return 'cannot travel that far.'
+    } else if (fare >= 2500) {
+        return 'cannot travel that far'
     }
 
 
